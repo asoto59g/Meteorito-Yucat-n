@@ -2,6 +2,9 @@
   <img src="logo.png" alt="ABC Geomática Agrícola SRL" width="280">
 </p>
 
+Dar clic al siguiente link 
+https://colab.research.google.com/drive/1JD1t6mQurgtKgTPByrcCtuFRHqRYpLRa?usp=sharing
+
 <h1 align="center">🌋 Detección de Cenotes — Cráter de Chicxulub</h1>
 
 <p align="center">
