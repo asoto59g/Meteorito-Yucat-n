@@ -5,9 +5,11 @@
 // ==========================
 // 1. ÁREA Y GEOMETRÍA
 // ==========================
-var roi = ee.Geometry.Rectangle([-91.5, 19.5, -87.5, 22.5]);
+var roi = ee.Geometry.Rectangle([-91.5, 17.5, -87.5, 22.5]);
 
 var center = ee.Geometry.Point([-89.6, 21.3]);
+
+var gravimetry = ee.Image("projects/ee-oasotob/assets/chicxulub_gravimetry_mgal");
 
 var outer = center.buffer(90000);   // 90 km
 var inner = center.buffer(80000);   // 80 km
@@ -118,6 +120,9 @@ Map.centerObject(center, 8);
 
 
 // Cenotes Detectados - Puntos Azules de tamaño constante
+
+Map.addLayer(gravimetry, {}, 'Gravimetry mgal', false);
+
 Map.addLayer(waterVisDots, {}, 'Cenotes Chicxulub');
 
 Export.table.toDrive({
