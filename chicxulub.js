@@ -120,7 +120,12 @@ Map.centerObject(center, 8);
 // Cenotes Detectados - Puntos Azules de tamaño constante
 Map.addLayer(waterVisDots, {}, 'Cenotes Chicxulub');
 
-
+Export.table.toDrive({
+  collection: waterFiltered,
+  description: 'Cenotes_Chicxulub_2023',
+  folder: 'GEE_Exports',
+  fileFormat: 'GeoJSON'
+});
 
 
 
